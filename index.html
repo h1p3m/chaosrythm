@@ -1,0 +1,28 @@
+<html>
+    <head>
+<title>cthulhu</title>
+
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<script src="js/script.js"></script>
+    </head>
+    <body id="mainArea" style="background-image: url('source/body.JPG'); ;background-size: cover;">
+     
+       
+        <div id="menu" style="float: left; position:relative; left:50%; top:50%;"><button style="font-family: cursive; background-color:blue; color:aliceblue; font-size: 20px; border-radius:40%;" onclick="startGame()">Play</button></div>
+        <div id="prog" style="display: flex; visibility: hidden;">
+            <div >
+                <progress id="progressbar" value="1" max="10" style="background-color: green;">            
+                </progress>
+            </div>
+            <div id="sleep" style="visibility: hidden; font-family: cursive; font-size: 20px; padding-left: 10px;color:aliceblue"><span>wake up</span></div></div>
+
+            <div id="sheep" class="sheepStyle" style="visibility: hidden;">
+    <img src="source/sheep.png" width="100px" onclick="check()" style="z-index: 1;">
+</div>
+<div>
+    <img src="source/fish.png" width="100px" onclick="voiceMan()" style="visibility: hidden;">
+</div>
+<div><img src="source/ctulhu.PNG" width="300px" style="position:absolute; bottom:0; left: 40%; z-index: -99999;"></div>
+</body>
+
+</html>
