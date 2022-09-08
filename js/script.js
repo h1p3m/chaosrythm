@@ -4,17 +4,37 @@ window.addEventListener("load", function(event) {
 
 
 var speed = 3000;
+var progress = 10;
+var timeCh = null;
+function changeTime(){
+    
+    var time = document.getElementById("time");
+   var timeInt =parseInt(time.textContent);
+   timeCh = setInterval(function(){
+    time.textContent = timeInt++;
+   if(timeInt%100==0){
+    if(progress<30){
+        progress+=5;
+    }
+   
+   }
+
+   }, 100);
+   
+   
+}
 
 function startGame(){
-    
+    changeTime();
     var t=null;
     t=setInterval(function(){
     var temp = document.getElementById("progressbar");
-    temp.value++;
-    if(temp.value==10){
+    temp.value+=progress;   
+    if(temp.value==100){
+
         alert("YOU LOOSE!");
         clearInterval(t);
-
+        clearInterval(timeCh);
     }
    
 
@@ -38,7 +58,7 @@ function check(){
     sheep.style.display = "none";
     createSheep();
  var prog = document.getElementById("progressbar");
- prog.value--;
+ prog.value-=10;
  
  
 }
@@ -59,8 +79,7 @@ function createSheep(){
         var sheep = document.getElementById("sheep");
         var x_position = Math.floor(Math.random() *  document.documentElement.clientWidth);
         var y_position = Math.floor(Math.random() * document.documentElement.clientHeight);
-        console.log(x_position);
-        console.log(document.documentElement.getBoundingClientRect().right-100);
+        
         if(x_position>=document.documentElement.getBoundingClientRect().right-100||y_position>=document.documentElement.getBoundingClientRect().bottom-200){
             createSheep();
         }
@@ -70,14 +89,7 @@ function createSheep(){
             sheep.style.display = "block";       
             
               
-        }
-        
-            
-            
-        
-       
-        
-        
+        }  
 
     }
     
