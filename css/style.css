@@ -2,3 +2,17 @@
       margin-top: 50px;
       margin-left: 50px;
   }
+  .sleepAnim{
+    animation: skew 3s infinite;
+    transform: translate3d(0, -7%, 0);
+    animation-direction: alternate;
+  }
+  @keyframes skew {
+    0% {
+      transform: translate3d(0, -7%, 0);
+    }
+    100% {
+      transform: translate3d(0, 7%, 0);
+    }
+   
+  }
