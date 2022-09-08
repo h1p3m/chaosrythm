@@ -13,7 +13,7 @@ function changeTime(){
    timeCh = setInterval(function(){
     time.textContent = timeInt++;
    if(timeInt%100==0){
-    if(progress<30){
+    if(progress<25){
         progress+=5;
     }
    
