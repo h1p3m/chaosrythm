@@ -1,0 +1,34 @@
+<html>
+    <head>
+<title>cthulhu</title>
+
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<script src="js/script.js"></script>
+    </head>
+    <body id="mainArea" style="background-image: url('source/body.JPG'); ;background-size: cover;">
+     
+       <div><span id="time" style="color: white; font-family:cursive; font-size:20px; position: relative;;float:right">1</span></div>
+        <div id="menu" style="float: left; position:relative; left:50%; top:50%;"><button style="font-family: cursive; background-color:blue; color:aliceblue; font-size: 20px; border-radius:40%;" onclick="startGame()">Play</button></div>
+        <div id="prog" style="display: flex; visibility: hidden;">
+            <div >
+                <progress id="progressbar" value="1" max="100" style="background-color: green;">            
+                </progress>
+            </div>
+            
+            <div id="sleep" style="visibility: hidden; font-family: cursive; font-size: 20px; padding-left: 10px;color:aliceblue"><span>Wake up</span></div></div>
+
+            <div id="sheep" class="sheepStyle" style="visibility: hidden;">
+    <img src="source/sheep.png" width="100px" onclick="check()" style="z-index: 1;">
+</div>
+
+<div>
+    <img src="source/wave.png" class="wave" style="position: absolute; z-index: -9999999;">    
+ </div>
+
+<div>
+    <img src="source/fish.png" width="100px" onclick="voiceMan()" style="visibility: hidden;">
+</div>
+<div><img src="source/ctulhu.PNG" class="sleepAnim" width="300px" style="position:absolute; bottom:20%; left: 40%; z-index: -99999;"></div>
+</body>
+
+</html>

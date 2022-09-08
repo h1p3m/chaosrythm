@@ -1,7 +1,31 @@
   .sheepStyle{
       margin-top: 50px;
       margin-left: 50px;
+      
   }
+.bodyBack{
+ /* background: url('mountan.png') no-repeat left bottom/100% 100%, url('body2.jpg') no-repeat left top/100% 100%;*/
+ background: url('body2.jpg') no-repeat left top/100% 100%;
+  z-index: -9;
+position: relative;
+overflow: hidden;
+
+}
+.footer {
+  position: absolute;
+  left: -5%;
+  bottom: -5%;  
+  z-index: -8;
+}
+@keyframes spin {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(360deg);}
+}
+
+.root{
+animation: spin 50s linear 0s infinite;
+overflow: hidden;
+}
   .sleepAnim{
     animation: skew 3s infinite;
     transform: translate3d(0, -7%, 0);
@@ -15,4 +39,52 @@
       transform: translate3d(0, 7%, 0);
     }
    
+  }
+  .wave {
+    
+    animation: skew2 1s infinite;
+    transform: skew2(50deg);
+    animation-direction: alternate;
+ 
+  }
+  
+  .wave2 {
+    
+    animation: skew3 3s infinite;
+    transform: skew3(60deg);
+    animation-direction: alternate;
+ 
+  }
+  .wave3 {
+    
+    animation: skew4 1s infinite;
+    transform: skew4(25deg);
+    animation-direction: alternate;
+ 
+  }
+  @keyframes skew4 {
+    0% {
+      transform: skewX(25deg);
+    }
+    100% {
+      transform: skewX(-25deg);
+    }
+  }
+
+  @keyframes skew2 {
+    0% {
+      transform: skewX(50deg);
+    }
+    100% {
+      transform: skewX(-50deg);
+    }
+  }
+
+  @keyframes skew3 {
+    0% {
+      transform: skewX(60deg);
+    }
+    100% {
+      transform: skewX(-60deg);
+    }
   }
