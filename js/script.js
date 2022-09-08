@@ -35,11 +35,28 @@ function startGame(){
         alert("YOU LOOSE!");
         clearInterval(t);
         clearInterval(timeCh);
+        afterEndGame();
     }
    
 
 },speed);
+function afterEndGame(){
+    var prog = document.getElementById("prog");
+prog.style.visibility = "hidden";
+var progressBar = document.getElementById("progressbar");
+progressBar.value = 1;
+progress = 10;
 
+var sheep = document.getElementById("sheep");
+sheep.style.visibility = "hidden";
+
+var sleep = document.getElementById("sleep");
+sleep.style.visibility = "hidden";
+var menu = document.getElementById("menu");
+menu.style.visibility = "visible";
+var timeScore = document.getElementById("time");
+timeScore.textContent = "1";
+}
 var prog = document.getElementById("prog");
 prog.style.visibility = "visible";
 var sheep = document.getElementById("sheep");
