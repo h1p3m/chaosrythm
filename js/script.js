@@ -1,5 +1,7 @@
 window.addEventListener("load", function(event) {
     createSheep();
+    createBulb();
+    
   });
 
 
@@ -116,4 +118,43 @@ function createSheep(){
 function voiceMan(){
     var audio = new Audio('source/fail.mp3');
     audio.play();
+}
+
+var numberBulb = 100;
+
+function getRandomArbitrary(min, max) {
+    return Math.random() * (max - min) + min;
+  }
+
+function createBulb(){
+   
+    for(i=0;i<numberBulb;i++){
+
+        var bulb = document.createElement("img");
+        bulb.src = "source/bulb.png";
+        bulb.setAttribute("width", "4%");
+        bulb.style.zIndex = -999;
+        bulb.style.position = "fixed";
+        
+
+        bulb.style.bottom = getRandomInt(97)+"%";
+        bulb.style.left = getRandomInt(97)+"%";
+        bulb.id = "1" + i;
+        
+       bulb.animate([
+        // keyframes
+        { transform: 'translate3D(0, 0, 0)' },
+        { transform: 'translate3D(0, -200%, 0)' },
+        { transform: 'translate3D(0, -400%, 0)', opacity: '0.1' }
+      ], {
+        // timing options
+        duration: getRandomArbitrary(4000, 8000),
+        iterations: Infinity
+        
+      })
+    
+        document.body.append(bulb);
+    }  
+ 
+   
 }

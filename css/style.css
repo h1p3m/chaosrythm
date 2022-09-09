@@ -11,6 +11,7 @@ position: relative;
 overflow: hidden;
 
 }
+
 .footer {
   position: absolute;
   left: -5%;
@@ -88,61 +89,6 @@ overflow: hidden;
       transform: skewX(-60deg);
     }
   }
-
-  .bulbAnim {
-    align-self:flex-end;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;    
-    transform-origin: bottom;
-    color: aliceblue;
+ 
    
-}
-.bulbAnim2 {
-  align-self:flex-end;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;    
-  transform-origin: bottom;
-  color: aliceblue;
- 
-}
-.bulbAnim3 {
-  align-self:flex-end;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;    
-  transform-origin: bottom;
-  color: aliceblue;
- 
-}
-
-.bounce-1 {
-    animation-name: bounce-1;
-    animation-timing-function: linear;
-}
-@keyframes bounce-1 {
-    0%   { transform: translateY(0); opacity: 1;}
-    20%   { transform: translateY(-10%); opacity: 0.5;}
-    50%  { transform: translateY(-20%); opacity: 0;}
-    100% { transform: translateY(-30%); opacity: 0;}
-}
-.bounce-2 {
-  animation-name: bounce-2;
-  animation-timing-function: linear;
-}
-@keyframes bounce-2 {
-  0%   { transform: translateY(0); opacity: 1;}
-  50%  { transform: translateY(-50%); opacity: 0;} 
- 
-  100% { transform: translateY(0); opacity: 0;}
-}
-.bounce-3 {
-  animation-name: bounce-3;
-  animation-timing-function: linear;
-}
-@keyframes bounce-3 {
-  0%   { transform: translateY(0); opacity: 1;}
-  20%  { transform: translateY(-10%); opacity: 0.8;}
-  40%  {transform:  translateY(-20%);opacity: 0;}
-  60%  {transform:  translateY(-30%);opacity: 0;}
-  80%  {transform:  translateY(-40%);opacity: 0;}
-  100% { transform: translateY(-50%); opacity: 0;}
-}
+  
