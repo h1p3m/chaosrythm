@@ -16,7 +16,7 @@ overflow: hidden;
   position: absolute;
   left: -5%;
   bottom: -5%;  
-  z-index: -8;
+  z-index: -6;
 }
 @keyframes spin {
   from {transform:rotate(0deg);}
@@ -89,6 +89,7 @@ overflow: hidden;
       transform: skewX(-60deg);
     }
   }
+ 
  
    
   

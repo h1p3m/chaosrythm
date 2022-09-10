@@ -8,15 +8,17 @@ window.addEventListener("load", function(event) {
 var speed = 3000;
 var progress = 10;
 var timeCh = null;
+var porgMinus = 10;
 function changeTime(){
     
     var time = document.getElementById("time");
-   var timeInt =parseInt(time.textContent);
-   timeCh = setInterval(function(){
+    var timeInt = parseInt(time.textContent);
+    timeCh = setInterval(function(){
     time.textContent = timeInt++;
-   if(timeInt%100==0){
+    if(timeInt%100==0){
     if(progress<25){
         progress+=5;
+      
     }
    
    }
@@ -32,7 +34,7 @@ function startGame(){
     t=setInterval(function(){
     var temp = document.getElementById("progressbar");
     temp.value+=progress;   
-    if(temp.value==100){
+    if(temp.value>=100){
 
         alert("YOU LOOSE!");
         clearInterval(t);
@@ -77,7 +79,7 @@ function check(){
     sheep.style.display = "none";
     createSheep();
  var prog = document.getElementById("progressbar");
- prog.value-=10;
+ prog.value-=porgMinus;
  
  
 }
@@ -133,11 +135,11 @@ function createBulb(){
         var bulb = document.createElement("img");
         bulb.src = "source/bulb.png";
         bulb.setAttribute("width", "4%");
-        bulb.style.zIndex = -999;
+        bulb.style.zIndex = -7;
         bulb.style.position = "fixed";
         
 
-        bulb.style.bottom = getRandomInt(97)+"%";
+        bulb.style.bottom = getRandomInt(80)+"%";
         bulb.style.left = getRandomInt(97)+"%";
         bulb.id = "1" + i;
         
